@@ -1,10 +1,8 @@
 class GithubRepo
+	attr_accessor :name, :url
 
-  attr_reader :name, :url
-
-  def initialize(hash)
-    @name = hash["name"]
-    @url = hash["html_url"]
-  end
-
+	def initialize(params)
+		@name = params["name"]
+		@url = params["html_url"]
+	end
 end
